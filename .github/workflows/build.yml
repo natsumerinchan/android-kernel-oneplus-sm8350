@@ -24,7 +24,7 @@ jobs:
         with:
           arch: arm64
           compiler: clang/11/binutils
-          defconfig: cos_config
+          defconfig: cos_defconfig
           image: Image-dtb
 
       - name: Upload final output
