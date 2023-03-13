@@ -16,6 +16,7 @@
 #include <linux/of_gpio.h>
 #include <linux/delay.h>
 #include <linux/regulator/consumer.h>
+#include <linux/uaccess.h>
 
 #include "kookong_ir_spi.h"
 
