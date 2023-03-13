@@ -1,0 +1,33 @@
+name: Build Kernel
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout kernel source
+        uses: actions/checkout@v3
+
+      - name: Checkout zipper
+        uses: actions/checkout@v3
+        with:
+          repository: luckyzyx/AnyKernel3
+          path: zipper
+
+      - name: Android kernel build
+        uses: luckyzyx/android-kernel-actions@master
+        id: build
+        env:
+          PYTHON_VERSION: 2
+        with:
+          arch: arm64
+          compiler: clang/11/binutils
+          defconfig: vendor/cos.config
+          image: Image-dtb
+
+      - name: Upload final output
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          path: zipper/*.zip
