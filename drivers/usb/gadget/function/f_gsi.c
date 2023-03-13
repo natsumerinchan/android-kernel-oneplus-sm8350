@@ -6,6 +6,7 @@
 #include <linux/module.h>
 #include "f_gsi.h"
 #include "rndis.h"
+#include "rndis.c"
 
 static struct usb_gsi_debugfs {
 	struct dentry *debugfs_root;
