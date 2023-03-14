@@ -16,6 +16,10 @@ jobs:
           repository: luckyzyx/AnyKernel3
           path: zipper
 
+      - name: Install tools
+        run: |
+          sudo apt install xz-utils
+
       - name: Android kernel build
         uses: luckyzyx/android-kernel-actions@master
         id: build
