@@ -10,7 +10,7 @@ setup_export() {
     export ARCH=arm64
     export SUBARCH=arm64
     # export KERNEL_CONFIG=vendor/lahaina_QGKI.config
-    export KERNEL_CONFIG=vendor/cos.config
+    export KERNEL_CONFIG=cos_defconfig
     export LLVM_VERSION=13
     # export ROM_DLKM=pixelos_dlkm
     export SETUP_KERNELSU=false
